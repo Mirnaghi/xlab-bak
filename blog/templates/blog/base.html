@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="{% static 'apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <link href="{% static 'blog/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'blog/css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'blog/fonts/ionicons' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:300,400,400i,600,700" rel="stylesheet">
+
+    <!-- Tools -->
+    <link href="{% static 'blog/tools/sequence/css/sequence-theme.basic.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'blog/tools/dropdownhover/css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'blog/tools/dropdownhover/css/bootstrap-dropdownhover.min.css' %}" rel="stylesheet">
+
+    <!-- site spec -->
+    <link href="{% static 'blog/tools/lightbox/ekko-lightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'blog/css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'blog/css/style.css' %}" rel="stylesheet">
+
+</head>
+<body>
+
+  {% block content %}
+  {% endblock %}
+</body>
+</html>

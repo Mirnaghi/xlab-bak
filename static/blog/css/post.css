@@ -1,0 +1,23 @@
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+h1, p {
+    line-height: 26px;
+    font-style: normal;
+    color: #535e72;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    text-rendering: optimizelegibility;
+    color: #272d3a;
+}
+
+ul {
+    text-align: center;
+}
+
+div.tags > ul > a {
+    margin-top: 8px;
+    font-size: 1.5em;
+}
