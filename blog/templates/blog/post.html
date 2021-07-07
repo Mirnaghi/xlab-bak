@@ -374,11 +374,9 @@
 
                   <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="tag-links ul-li float-left clearfix tags">
-                      <span class="title-text">tags:</span>
-                      <ul class="clearfix">
-                        {% for c in post.categories.all %}
-                        <a href="#!">{{ c }}</a>
-                        {% endfor %}
+                      <span class="title-text" style="padding-bottom: 0; margin-bottom: 0;">tags:</span>
+                      <ul class="clearfix" style="padding-bottom: 0;">
+                        {{ tags|safe }}
                       </ul>
                     </div>
                   </div>
@@ -717,11 +715,11 @@
     <script src="{% static 'blog/js/jquery.counterup.min.js' %}"></script>
 
     <!-- google - jquery include -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhrdEzlfpnsnfq4MgU1e1CCsrvVx2d59s"></script>
-        <script src="{% static 'blog/js/gmaps.js' %}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhrdEzlfpnsnfq4MgU1e1CCsrvVx2d59s"></script>
+    <script src="{% static 'blog/js/gmaps.js' %}"></script>
 
     <!-- mCustomScrollbar for sidebar menu - jquery include -->
-        <script src="{% static 'blog/js/jquery.mCustomScrollbar.js' %}"></script>
+    <script src="{% static 'blog/js/jquery.mCustomScrollbar.js' %}"></script>
 
     <!-- custom - jquery include -->
     <script src="{% static 'blog/js/custom.js' %}"></script>

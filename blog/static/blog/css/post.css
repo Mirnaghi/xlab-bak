@@ -21,3 +21,8 @@ div.tags > ul > a {
     margin-top: 8px;
     font-size: 1.5em;
 }
+
+.tag-links {
+    display: flex;
+    align-items: baseline;
+}

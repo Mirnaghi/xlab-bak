@@ -122,10 +122,11 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-child">
-                                    <a href="#!">features</a>
+                                    <a href="#!">categories</a>
                                     <ul class="sub-menu">
-                                        <li><a href="feature-app.html">App Landing Creative</a></li>
-                                        <li><a href="feature-sass.html">Saas Landing Creative</a></li>
+                                        {% for k in categories.keys %}
+                                            <li><a href="{% url 'category' category_name=k %}">{{ k }}</a></li>
+                                        {% endfor %}
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-child">
@@ -155,7 +156,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="testimonial.html">reviews</a></li>
-                                <li><a href="pricing.html">pricing</a></li>
+                                <!-- <li><a href="pricing.html">pricing</a></li> -->
                                 <li class="menu-item-has-child">
                                     <a href="#!">blogs</a>
                                     <ul class="sub-menu">
@@ -441,9 +442,9 @@
                                 <div class="blog-grid-item clearfix">
                                     <div class="blog-image">
                                         <img src="../../media/{{ p.cover_img }}">
-                                        <div class="post-date">
+                                        <!-- <div class="post-date">
                                             <strong class="date-text">{{ p.publish_date }}</strong>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="blog-content">
                                         <div class="post-meta ul-li mb-30 clearfix">
@@ -456,7 +457,7 @@
                                                     </a>
                                                 </li>
                                                 {% endfor %}
-                                                <li><i class='uil uil-stopwatch'></i> 5 Hours ago</li>
+                                                <li><i class='uil uil-stopwatch'></i> {{ p.publish_date }}</li>
                                             </ul>
                                         </div>
                                          {% for c in p.categories.all %}

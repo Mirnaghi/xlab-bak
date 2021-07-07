@@ -62,8 +62,11 @@ def about(request):
 
 def post(request, slug):
     post = Post.objects.get(slug=slug)
-    print(post)
-    return render(request, 'blog/post.html', {'post': post})
+    tags = ''
+    for c in post.categories.all():
+        tags += f'<a href="">{c.name}, </a>'
+    print(tags[:-6] + tags[-5:])
+    return render(request, 'blog/post.html', {'post': post, 'tags': tags[:-6] + tags[-5:]})
 
 
 def category(request, category_name):
