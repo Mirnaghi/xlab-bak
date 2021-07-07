@@ -72,7 +72,7 @@
 
     <!-- header-section - start
     ================================================== -->
-    <header id="header-section" class="header-section white-content sticky-header clearfix">
+    <header id="header-section" class="header-section white-content sticky-header clearfix" style="background-color: #2a3b8f;">
       <div class="container-fluid">
         <div class="row">
 
@@ -80,7 +80,7 @@
           <div class="col-lg-2 col-md-6 col-sm-6">
             <div class="brand-logo float-left">
               <a href="index-1.html" class="brand-link">
-                <img src="assets/images/logo/logo-1.png" alt="logo_not_found">
+                <img src="{% static 'blog/img/logo/Logo-1.png' %}" alt="logo_not_found">
               </a>
             </div>
           </div>
@@ -336,8 +336,8 @@
 
     <!-- breadcrumb-section - start
     ================================================== -->
-    <div id="breadcrumb-section" class="breadcrumb-section mma-container clearfix" style="background-image: url(assets/images/breadcrumb/bg-image-2.jpg);">
-      <div class="overlay-black"></div>
+    <div id="breadcrumb-section" class="breadcrumb-section mma-container clearfix">
+      <div class="overlay-black" style="background-color: #ffffff; height: 400px;"></div>
     </div>
     <!-- breadcrumb-section - end
     ================================================== -->
@@ -513,7 +513,7 @@
 
     <!-- footer-section - start
     ================================================== -->
-    <footer id="footer-section" class="footer-section sec-ptb-160 pb-0 clearfix" style="background-image: url(assets/images/footer-bg-1.png);">
+    <footer id="footer-section" class="footer-section sec-ptb-160 pb-0 clearfix" style="background-image: linear-gradient(0deg, #f15b2b 0%, #be265f 0%, #2a3b8f 100%);">
 
       <div class="newsletter-section text-center sec-ptb-160 pt-0 clearfix">
         <div class="container">
@@ -535,7 +535,7 @@
             </div>
           </div>
 
-          <p class="mb-0">We won’t spam you, Pinky Promise</p>
+          <!-- <p class="mb-0">We won’t spam you, Pinky Promise</p> -->
 
         </div>
       </div>
@@ -572,7 +572,7 @@
 
                 <div class="brand-logo mb-30">
                   <a href="index-1.html" class="brand-link">
-                    <img src="assets/images/logo/logo-2.png" alt="logo_not_found">
+                    <img src="{% static 'blog/img/logo/Logo-2.png' %}" alt="logo_not_found">
                   </a>
                 </div>
                 <p class="mb-30">

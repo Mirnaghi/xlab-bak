@@ -16,8 +16,8 @@
 
         <!-- icon - css include -->
         <link rel="stylesheet" type="text/css" href="{% static 'blog/css/unicons.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'blog/css/flaticon.css' %}"><!--
-        <link rel="stylesheet" type="text/css" href="{% static 'blog/css/fontawesome-all.css' %}"> -->
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/css/flaticon.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/css/fontawesome-all.css' %}">
         <!-- reference your installed Font Awesome Free package's files here -->
         <link href="{% static 'blog/fontawesome_free/css/all.css' %}" rel="stylesheet" type="text/css">
 
@@ -335,7 +335,7 @@
 
         <!-- breadcrumb-section - start
         ================================================== -->
-        <section id="breadcrumb-section" class="breadcrumb-section mma-container clearfix" style="background-image: url(https://images.unsplash.com/photo-1588354924596-71b1cb1393fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80);">
+        <section id="breadcrumb-section" class="breadcrumb-section mma-container clearfix" style="background-image: linear-gradient(0deg, #f15b2b 0%, #be265f 0%, #2a3b8f 100%);">
             <!-- <div class="design-image-1 clearfix">
                 <small class="image-1" data-aos="fade-up" data-aos-delay="100">
                     <img src="http://lorempixel.com/1920/690/technics" alt="image_not_found">
@@ -550,21 +550,15 @@
                             <div class="widget widget_tag_cloud ul-li clearfix">
                                 <h2 class="widget_title">tags</h2>
                                 <ul class="clearfix">
-                                    <li><a href="#!">travels</a></li>
-                                    <li><a href="#!">adventure</a></li>
-                                    <li><a href="#!">foods</a></li>
-                                    <li><a href="#!">lifestyle</a></li>
-                                    <li><a href="#!">traveling</a></li>
-                                    <li><a href="#!">photography</a></li>
-                                    <li><a href="#!">trends</a></li>
-                                    <li><a href="#!">fashion</a></li>
-                                    <li><a href="#!">music</a></li>
+                                    {% for k in categories.keys %}
+                                        <li><a href="{% url 'category' category_name=k %}">{{ k }}</a></li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                             <!-- widget_tag_cloud - end -->
 
                             <!-- widget_instagram - start -->
-                            <div class="widget widget_instagram ul-li clearfix">
+                            <!-- <div class="widget widget_instagram ul-li clearfix">
                                 <h2 class="widget_title">Instagram</h2>
                                 <ul class="clearfix">
                                     <li><a href="#!"><img src="assets/images/instagram/img-1.jpg" alt="image_not_found"></a></li>
@@ -574,7 +568,7 @@
                                     <li><a href="#!"><img src="assets/images/instagram/img-5.jpg" alt="image_not_found"></a></li>
                                     <li><a href="#!"><img src="assets/images/instagram/img-1.jpg" alt="image_not_found"></a></li>
                                 </ul>
-                            </div>
+                            </div> -->
                             <!-- widget_instagram - end -->
 
                             <!-- widget_newsletter - start -->
@@ -604,7 +598,8 @@
 
         <!-- footer-section - start
         ================================================== -->
-        <footer id="footer-section" class="footer-section sec-ptb-160 pb-0 clearfix" style="background-image: url(https://images.unsplash.com/photo-1618224706414-92301b84910d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
+        <!-- https://images.unsplash.com/photo-1618224706414-92301b84910d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80 -->
+        <footer id="footer-section" class="footer-section sec-ptb-160 pb-0 clearfix" style="background-image: linear-gradient(0deg, #f15b2b 0%, #be265f 0%, #2a3b8f 100%);">
 
             <div class="newsletter-section text-center sec-ptb-160 pt-0 clearfix">
                 <div class="container">
@@ -626,7 +621,7 @@
                         </div>
                     </div>
 
-                    <p class="mb-0">We won’t spam you, Pinky Promise</p>
+                    <!-- <p class="mb-0">We won’t spam you, Pinky Promise</p> -->
 
                 </div>
             </div>
@@ -663,7 +658,7 @@
 
                                 <div class="brand-logo mb-30">
                                     <a href="index-1.html" class="brand-link">
-                                        <img src="assets/images/logo/logo-2.png" alt="logo_not_found">
+                                        <img src="{% static 'blog/img/logo/Logo-2.png' %}" alt="logo_not_found">
                                     </a>
                                 </div>
                                 <p class="mb-30">
