@@ -13,7 +13,7 @@ h1, p {
     color: #272d3a;
 }
 
-ul {
+ul.post-content {
     text-align: center;
 }
 
@@ -25,4 +25,13 @@ div.tags > ul > a {
 .tag-links {
     display: flex;
     align-items: baseline;
+}
+
+a.tag-link {
+    font-size: 1.25em !important;
+    margin-right: 5px;
+}
+
+header {
+    background-color: #2a3b8f;
 }

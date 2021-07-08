@@ -21,7 +21,7 @@ def home(request):
 
     # cat = {i.name: categories[i.id - 1]['count'] for i in all_category}
     # print(cat)
-    return render(request, 'blog/home.html', {'posts': posts, 'categories': cat_post})
+    return render(request, 'blog/home.html', {'posts': posts, 'categories': cat_post, 'title': "XLAB - home page"})
 
 
 def iot_groups(request):
@@ -64,7 +64,7 @@ def post(request, slug):
     post = Post.objects.get(slug=slug)
     tags = ''
     for c in post.categories.all():
-        tags += f'<a href="">{c.name}, </a>'
+        tags += f'<a href="" class="tag-link">{c.name}, </a>'
     print(tags[:-6] + tags[-5:])
     return render(request, 'blog/post.html', {'post': post, 'tags': tags[:-6] + tags[-5:]})
 
