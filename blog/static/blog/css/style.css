@@ -1613,9 +1613,9 @@ button {
 .breadcrumb-section {
   z-index: 1;
   overflow: hidden;
-  padding-top: 217px;
+  padding-top: 150px; /* 217*/
   position: relative;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
