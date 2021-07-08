@@ -1376,7 +1376,7 @@ button {
         color: #2a3b8f;
         text-decoration: underline; }
   .footer-section .footer-bottom {
-    padding: 50px 0px;
+    padding: 25px 0px; /* 50 */
     border-top: 2px solid #eef1ff; }
     .footer-section .footer-bottom .useful-links > ul > li {
       margin-right: 35px; }
